@@ -29,7 +29,7 @@ Der MCP-Endpunkt ist standardmäßig nur lokal auf dem ETS-Rechner erreichbar. K
 - reproduzierbarer Fehler → **Issues / Bug report**
 - Idee / Erweiterungswunsch → **Discussions** oder **Feature request**
 - Sicherheitsproblem → **nicht öffentlich**, siehe `SECURITY.md`
-- vertrauliche oder geschäftliche Anfrage → `gerald@docenko.eu`
+- vertrauliche oder geschäftliche Anfrage → `support@knx-mcp.com`
 
 Bitte keine KNX-Projektdateien, Kundendaten, Passwörter, Zugangsschlüssel oder KNX-Secure-Schlüssel öffentlich hochladen.
 ## Weitere Anleitungen

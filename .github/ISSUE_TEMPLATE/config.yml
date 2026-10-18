@@ -1,11 +1,11 @@
 blank_issues_enabled: false
 contact_links:
   - name: Questions and community discussions
-    url: https://github.com/Docenko-Development/knx-mcp-community/discussions
+    url: https://github.com/knx-mcp/knx-mcp-community/discussions
     about: Ask setup questions, discuss workflows and share examples.
   - name: KNX-MCP website
     url: https://knx-mcp.com
     about: Product information, installation overview and FAQ.
   - name: Security issue
-    url: https://github.com/Docenko-Development/knx-mcp-community/blob/main/SECURITY.md
+    url: https://github.com/knx-mcp/knx-mcp-community/blob/main/SECURITY.md
     about: Please report vulnerabilities privately, not as a public issue.

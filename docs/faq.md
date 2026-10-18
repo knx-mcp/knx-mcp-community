@@ -59,4 +59,4 @@ The KNX-MCP **application source code is not published in this community reposit
 
 ## Where should I ask for help or report an issue?
 
-Use [GitHub Discussions](https://github.com/Docenko-Development/knx-mcp-community/discussions) for setup questions and workflows, and [GitHub Issues](https://github.com/Docenko-Development/knx-mcp-community/issues) for reproducible bugs. Report vulnerabilities **privately** following the [security policy](../SECURITY.md); never publish access keys, KNX Secure keys, customer projects or identifiable customer data. See [Support](../SUPPORT.md).
+Use [GitHub Discussions](https://github.com/knx-mcp/knx-mcp-community/discussions) for setup questions and workflows, and [GitHub Issues](https://github.com/knx-mcp/knx-mcp-community/issues) for reproducible bugs. Report vulnerabilities **privately** following the [security policy](../SECURITY.md); never publish access keys, KNX Secure keys, customer projects or identifiable customer data. See [Support](../SUPPORT.md).

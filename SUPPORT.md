@@ -12,7 +12,7 @@ This repository is the public support and community space for KNX-MCP.
 | Reusable skill / prompt | `skills/` + pull request |
 | Release information | `docs/release-notes/` |
 | Security vulnerability | **Private email** — see `SECURITY.md` |
-| Commercial / confidential matter | `gerald@docenko.eu` |
+| Commercial / confidential matter | `support@knx-mcp.com` |
 
 Before posting, check [Getting started](docs/getting-started.md) and the [FAQ](docs/faq.md) for common activation, connection and permission questions.
 

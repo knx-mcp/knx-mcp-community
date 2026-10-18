@@ -8,7 +8,7 @@ body:
       value: |
         This report was prepared by an AI assistant. **Please review it before submitting.**
         Remove customer data, project names, addresses of real buildings, passwords, keys and KNX Secure material.
-        Security vulnerabilities do not belong here - see [SECURITY.md](https://github.com/Docenko-Development/knx-mcp-community/blob/main/SECURITY.md).
+        Security vulnerabilities do not belong here - see [SECURITY.md](https://github.com/knx-mcp/knx-mcp-community/blob/main/SECURITY.md).
 
   - type: dropdown
     id: kind
