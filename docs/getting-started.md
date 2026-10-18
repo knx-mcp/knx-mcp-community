@@ -163,6 +163,6 @@ Use the ETS group monitor with KNX-MCP as decoding app when sender information i
 
 ## 10. Need help?
 
-- Questions and setup help: https://github.com/Docenko-Development/knx-mcp-community/discussions
-- Bugs: https://github.com/Docenko-Development/knx-mcp-community/issues
+- Questions and setup help: https://github.com/knx-mcp/knx-mcp-community/discussions
+- Bugs: https://github.com/knx-mcp/knx-mcp-community/issues
 - Security: see [../SECURITY.md](../SECURITY.md)

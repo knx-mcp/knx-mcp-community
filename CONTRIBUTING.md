@@ -38,7 +38,7 @@ See [`skills/README.md`](skills/README.md).
 ## Submitting a documentation or skill change
 
 1. Check [Getting started](docs/getting-started.md) and the [FAQ](docs/faq.md) so guidance does not contradict the supported release.
-2. Use a separate branch and open a pull request with a focused description of the change. For product questions or an uncertain proposal, consider [Discussions](https://github.com/Docenko-Development/knx-mcp-community/discussions) first.
+2. Use a separate branch and open a pull request with a focused description of the change. For product questions or an uncertain proposal, consider [Discussions](https://github.com/knx-mcp/knx-mcp-community/discussions) first.
 3. Use repository-relative links for internal documents and verify that every added link resolves.
 4. If a skill describes a write or bus operation, explain its permissions and confirmation points; never imply that safety checks are bypassed. The first [read-only project overview](skills/project-overview-read-only.md) is an example.
 5. Check the [pull request checklist](.github/PULL_REQUEST_TEMPLATE.md) and remove confidential information before submission.

@@ -13,7 +13,7 @@
   <a href="https://my.knx.org/shop?action=search&amp;search=KNX-MCP">Get KNX-MCP</a> ·
   <a href="https://knx-mcp.com/">Product website</a> ·
   <a href="docs/getting-started.md">Get started</a> ·
-  <a href="https://github.com/Docenko-Development/knx-mcp-community/discussions">Discussions</a>
+  <a href="https://github.com/knx-mcp/knx-mcp-community/discussions">Discussions</a>
 </p>
 
 **KNX-MCP** is an ETS App that connects an open ETS project to MCP-compatible AI assistants such as Claude, Microsoft Copilot or ChatGPT through the **Model Context Protocol (MCP)** and the official ETS SDK.
@@ -46,11 +46,11 @@ See [Getting started](docs/getting-started.md) for configuration details and tro
 - **Website:** https://knx-mcp.com
 - **Getting started:** [docs/getting-started.md](docs/getting-started.md)
 - **Frequently asked questions:** [docs/faq.md](docs/faq.md)
-- **Questions & workflows:** https://github.com/Docenko-Development/knx-mcp-community/discussions
+- **Questions & workflows:** https://github.com/knx-mcp/knx-mcp-community/discussions
 - **Discussion categories and community guide:** [docs/community-guide.md](docs/community-guide.md)
-- **Bug reports:** https://github.com/Docenko-Development/knx-mcp-community/issues
+- **Bug reports:** https://github.com/knx-mcp/knx-mcp-community/issues
 - **Skills:** [skills/README.md](skills/README.md) · [Project overview](skills/project-overview-read-only.md) · [Group-address review](skills/group-address-review-read-only.md)
-- **App releases:** [Version history](docs/releases.md) · [GitHub Releases](https://github.com/Docenko-Development/knx-mcp-community/releases) · [Release 1 notes](docs/release-notes/1.1.0.0.md)
+- **App releases:** [Version history](docs/releases.md) · [GitHub Releases](https://github.com/knx-mcp/knx-mcp-community/releases) · [Release 1 notes](docs/release-notes/1.1.0.0.md)
 - **Security:** [SECURITY.md](SECURITY.md)
 
 ## App releases and downloads
@@ -58,7 +58,7 @@ See [Getting started](docs/getting-started.md) for configuration details and tro
 A [1.2.0.0 community issue plan](docs/roadmap/knx-mcp-1.2.0.0-issue-triage.md) tracks incoming feedback and proposed tests. **This version is planned, not yet released.**
 
 
-KNX-MCP app versions are distributed **only through the [KNX Online Shop (MyKNX)](https://my.knx.org/shop?action=search&search=KNX-MCP)**. The [version history](docs/releases.md) and [GitHub Releases](https://github.com/Docenko-Development/knx-mcp-community/releases) provide release information; no KNX-MCP ETS App installer or application source code is hosted here.
+KNX-MCP app versions are distributed **only through the [KNX Online Shop (MyKNX)](https://my.knx.org/shop?action=search&search=KNX-MCP)**. The [version history](docs/releases.md) and [GitHub Releases](https://github.com/knx-mcp/knx-mcp-community/releases) provide release information; no KNX-MCP ETS App installer or application source code is hosted here.
 
 ## What KNX-MCP does
 
@@ -99,7 +99,7 @@ Optional network access can be enabled explicitly. The KNX-MCP endpoint uses pla
 | propose a product improvement | **Discussions** or **Issues → Feature request** |
 | contribute a reusable skill or documentation improvement | **Pull request** |
 | report a security problem | **Privately** — see [SECURITY.md](SECURITY.md) |
-| discuss a commercial or confidential matter | **gerald@docenko.eu** |
+| discuss a commercial or confidential matter | **support@knx-mcp.com** |
 
 Please **never post ETS project files, customer data, passwords, access keys, KNX Secure keys or other confidential information** in a public issue or discussion. Anonymised screenshots and excerpts are welcome.
 

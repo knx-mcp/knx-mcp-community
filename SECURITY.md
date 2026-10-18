@@ -4,8 +4,8 @@ Please report security vulnerabilities **privately**. Do not open a public issue
 
 ## How to report
 
-- **With a GitHub account:** [Report a vulnerability](https://github.com/Docenko-Development/knx-mcp-community/security/advisories/new) (private vulnerability reporting; only the maintainers can see it).
-- **By email:** **support@docenko.eu**, subject **KNX-MCP security**
+- **With a GitHub account:** [Report a vulnerability](https://github.com/knx-mcp/knx-mcp-community/security/advisories/new) (private vulnerability reporting; only the maintainers can see it).
+- **By email:** **support@knx-mcp.com**, subject **KNX-MCP security**
 
 ## Please include
 
