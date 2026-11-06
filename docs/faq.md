@@ -41,6 +41,10 @@ Depending on permissions, yes. For each tool KNX-MCP provides **Allowed**, **Con
 
 Start with an optional [read-only project overview](../skills/project-overview-read-only.md).
 
+## Is the connection encrypted?
+
+From **1.2.0.4 (Release 2)**, yes, if you enable it: KNX-MCP offers **HTTPS directly in the app** — with an own certificate created on request or an existing one from the Windows certificate store. The private key stays on the computer, and the access key remains mandatory. The access key is sent as `Authorization: Bearer`. See [HTTPS and network access](getting-started.md#8-https-and-network-access).
+
 ## Is it safe to enable access from another computer?
 
 The MCP endpoint is local-only by default. Optional network access uses **plain HTTP** unless **HTTPS** is enabled in the app (from 1.2.0.4). Use only a trusted network or VPN, protect the configured access key and do **not** expose this endpoint directly to the public internet.

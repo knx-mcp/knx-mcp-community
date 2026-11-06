@@ -16,13 +16,15 @@
   <a href="https://github.com/knx-mcp/knx-mcp-community/discussions">Discussions</a>
 </p>
 
+> **New in Release 2 (1.2.0.4): improved communication with encryption.** Optional **HTTPS** directly in the app, the access key as `Authorization: Bearer`, several agents at once, and direct connections for Microsoft Scout and GitHub Copilot — in many cases without a proxy or bridge. Plus 21 new tools (97 in total) and help in six languages. [Release notes](docs/release-notes/1.2.0.4.md)
+
 **KNX-MCP** is an ETS App that connects an open ETS project to MCP-compatible AI assistants such as Claude, Microsoft Copilot or ChatGPT through the **Model Context Protocol (MCP)** and the official ETS SDK.
 
 This repository is the public community space for **questions, bug reports, feature ideas, setup help, reusable skills and release information**. It does **not** contain the source code of KNX-MCP.
 
 | | |
 |---|---|
-| Current version | **1.2.0.4 · Release 2** — validated by KNX |
+| Current version | **1.2.0.4 · Release 2** — validated by KNX · [what's new](docs/release-notes/1.2.0.4.md) |
 | ETS support | **ETS5 (5.7 or later) and ETS6** |
 | Availability | **Currently available free of charge** in the KNX Online Shop |
 | Website | https://knx-mcp.com |

@@ -2,6 +2,8 @@
 
 This guide covers **KNX-MCP 1.2.0.4 · Release 2**.
 
+> **New in Release 2: improved communication with encryption.** HTTPS directly in the app (optional), the access key as `Authorization: Bearer`, several agents at once, and direct connections for Microsoft Scout and GitHub Copilot. In many cases no proxy or bridge is needed any more.
+
 ## 1. Install KNX-MCP
 
 1. Get **KNX-MCP** from the KNX Online Shop (MyKNX): https://my.knx.org/shop?action=search&search=KNX-MCP
@@ -41,36 +43,15 @@ When you are comfortable with the connection, configure the permission level for
 
 ## 4. Connect an MCP client
 
-The KNX-MCP panel shows ready-to-copy client configuration in **Server settings → Client configuration**, including the current access key.
+The KNX-MCP panel shows ready-to-copy client configuration in **Server settings → Client configuration**, including the current access key. Since 1.2.0.4 the panel also offers templates for HTTPS, Claude one-click installation, Claude Desktop, Claude Code and Microsoft Scout.
 
 Keep the access key private. The examples below use `<KEY>` as a placeholder.
 
-The templates in the panel send the access key as `Authorization: Bearer` (from 1.2.0.4). The header `X-KnxMcp-Key` used below keeps working. When in doubt, use the configuration shown in the panel.
-
-### Claude Desktop via `mcp-remote`
-
-For a client configuration that starts local stdio processes, use `mcp-remote` as the HTTP bridge. This requires Node.js.
-
-```json
-{
-  "mcpServers": {
-    "knx-ets6": {
-      "command": "npx",
-      "args": [
-        "mcp-remote@latest",
-        "http://127.0.0.1:51900/mcp",
-        "--allow-http",
-        "--header",
-        "X-KnxMcp-Key:<KEY>"
-      ]
-    }
-  }
-}
-```
-
-For ETS5, use port `51950` unless you changed it in KNX-MCP.
+The access key is sent as **`Authorization: Bearer <KEY>`** — the usual way for MCP clients and gateways. The former header `X-KnxMcp-Key` keeps working for existing configurations.
 
 ### Clients with native MCP-over-HTTP support
+
+Claude Code, GitHub Copilot, Microsoft Scout and other clients that support Streamable HTTP connect directly:
 
 ```json
 {
@@ -79,14 +60,41 @@ For ETS5, use port `51950` unless you changed it in KNX-MCP.
       "type": "http",
       "url": "http://127.0.0.1:51900/mcp",
       "headers": {
-        "X-KnxMcp-Key": "<KEY>"
+        "Authorization": "Bearer <KEY>"
       }
     }
   }
 }
 ```
 
-Other MCP-compatible clients can connect directly when they support Streamable HTTP. Clients that only start local programs can use an HTTP-to-stdio bridge such as `mcp-remote`.
+With HTTPS enabled (see section 8), use the `https://` address shown in the panel.
+
+### Claude Desktop and other clients via `mcp-remote`
+
+Clients that only start local programs can use `mcp-remote` as the HTTP bridge. This requires Node.js. The access key is passed through an environment variable, so the space in the Bearer value is not part of the command arguments:
+
+```json
+{
+  "mcpServers": {
+    "knx-ets6": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "mcp-remote@latest",
+        "http://127.0.0.1:51900/mcp",
+        "--allow-http",
+        "--header",
+        "Authorization:${KNX-MCP_AUTHORIZATION}"
+      ],
+      "env": {
+        "KNX-MCP_AUTHORIZATION": "Bearer <KEY>"
+      }
+    }
+  }
+}
+```
+
+`--allow-http` is only needed for an `http://` address. For ETS5, use port `51950` unless you changed it in KNX-MCP. For Claude Desktop the panel can also export a connection profile for the Claude extension.
 
 ## 5. Understand permissions
 
@@ -127,16 +135,20 @@ In **ETS5**, telegrams captured directly by KNX-MCP do not contain the sender ad
 
 Sending a group value requires confirmation by default for every telegram. Device programming is blocked by default until explicitly enabled.
 
-## 8. Optional network access
+## 8. HTTPS and network access
 
 By default, the MCP endpoint is reachable only from the local ETS computer.
 
+**HTTPS (from 1.2.0.4):** KNX-MCP can encrypt the connection itself. In **Server settings**, create an own certificate on explicit request or choose an existing one from the Windows certificate store, and export its public part for the client. The private key stays on the computer; the access key remains mandatory. Without HTTPS the endpoint uses plain HTTP.
+
+**Gateways and reverse proxies:** additional local DNS names, trusted gateway addresses and allowed origins can be released exactly in Server settings. Microsoft Copilot and ChatGPT reach ETS over the internet through such an MCP gateway.
+
 If you explicitly enable network access in **Server settings**:
 
+- enable **HTTPS**
 - keep the access key secret
 - restrict access to trusted systems
 - prefer a VPN or trusted network
-- enable **HTTPS** in Server settings (from 1.2.0.4), otherwise the endpoint uses **plain HTTP without TLS**
 
 Do not expose the endpoint directly to the public internet.
 

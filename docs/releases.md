@@ -4,7 +4,7 @@ This community repository documents official **KNX-MCP ETS App** releases. The a
 
 | KNX-MCP version | Release | Supported ETS versions | Release information |
 |---|---|---|---|
-| **1.2.0.4** | Release 2 · November 2026 | ETS5 5.7+ and ETS6 | [Release notes](release-notes/1.2.0.4.md) · [GitHub release with PDF (EN/DE)](https://github.com/knx-mcp/knx-mcp-community/releases/tag/app-v1.2.0.4) |
+| **1.2.0.4** | Release 2 · November 2026 — improved communication, **HTTPS** | ETS5 5.7+ and ETS6 | [Release notes](release-notes/1.2.0.4.md) · [GitHub release with PDF (EN/DE)](https://github.com/knx-mcp/knx-mcp-community/releases/tag/app-v1.2.0.4) |
 | **1.1.0.0** | Release 1 · October 2026 | ETS5 5.7+ and ETS6 | [Release notes](release-notes/1.1.0.0.md) |
 
 **Currently free of charge** in the KNX Online Shop, subject to future change. The MyKNX listing is authoritative for availability and installation.
