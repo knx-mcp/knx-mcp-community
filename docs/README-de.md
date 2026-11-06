@@ -2,7 +2,9 @@
 
 **KNX-MCP** ist eine ETS-App, die das geöffnete ETS-Projekt über das Model Context Protocol (MCP) mit MCP-fähigen KI-Assistenten verbindet.
 
-Aktuelle Version: **1.1.0.0 · Release 1**  
+> **Neu in Release 2 (1.2.0.4): verbesserte Kommunikation mit Verschlüsselung.** Optional **HTTPS** direkt in der App, der Zugangsschlüssel als `Authorization: Bearer`, mehrere Agenten gleichzeitig und direkte Verbindung für Microsoft Scout und GitHub Copilot – oft ohne Proxy oder Brücke. Dazu 21 neue Werkzeuge (insgesamt 97) und Hilfe in sechs Sprachen. [Release Notes (Englisch)](release-notes/1.2.0.4.md)
+
+Aktuelle Version: **1.2.0.4 · Release 2**  
 Unterstützt: **ETS5 ab 5.7 und ETS6**  
 Bezug: derzeit **kostenlos** über den KNX Online Shop.
 
