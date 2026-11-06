@@ -1,6 +1,6 @@
 # KNX-MCP Community FAQ
 
-Applies to **KNX-MCP 1.1.0.0 (Release 1)** for **ETS5 5.7 or later and ETS6**. The documentation shipped with your installed app remains authoritative for your version.
+Applies to **KNX-MCP 1.2.0.4 (Release 2)** for **ETS5 5.7 or later and ETS6**. The documentation shipped with your installed app remains authoritative for your version.
 
 ## Where can I get KNX-MCP?
 
@@ -8,7 +8,7 @@ Get the ETS App through the [KNX Online Shop (MyKNX)](https://my.knx.org/shop?ac
 
 ## How do I activate KNX-MCP for a project?
 
-Open the project in ETS and open the KNX-MCP panel. New projects start with **Project MCP switched off**. Choose **Switch project MCP on** in the panel or ETS toolbar. Then use **Server settings → Client configuration** to obtain the configuration for your MCP client. Do not share the displayed access key.
+Open the project in ETS and open the KNX-MCP panel. New projects start with the project MCP stopped. Choose **Start project MCP** in the panel or ETS toolbar. Then use **Server settings → Client configuration** to obtain the configuration for your MCP client. Do not share the displayed access key.
 
 ## What are the default MCP endpoints?
 
@@ -29,11 +29,11 @@ KNX-MCP exposes an MCP endpoint using **Streamable HTTP**. MCP clients that supp
 
 ## Why does my AI client not see the project?
 
-Check that ETS is running with the project open, **Project MCP is switched on**, the configured endpoint and port match your ETS instance, and the client uses the current access key. Also check the client’s transport/bridge configuration and local firewall. See the [troubleshooting section](getting-started.md#9-troubleshooting).
+Check that ETS is running with the project open, **the project MCP is started**, the configured endpoint and port match your ETS instance, and the client uses the current access key. Also check the client’s transport/bridge configuration and local firewall. See the [troubleshooting section](getting-started.md#9-troubleshooting).
 
 ## Can one client work with several open ETS projects?
 
-Yes. KNX-MCP can expose several enabled projects through one endpoint. Project-specific operations must identify the intended project when several are available. A project that is open in ETS but has **Project MCP switched off** is not accessible through MCP. Several MCP clients may also connect at once.
+Yes. KNX-MCP can expose several enabled projects through one endpoint. Project-specific operations must identify the intended project when several are available. A project that is open in ETS but whose project MCP is stopped is not accessible through MCP. Several MCP clients may also connect at once.
 
 ## Can KNX-MCP change my project or send KNX telegrams?
 
@@ -43,7 +43,7 @@ Start with an optional [read-only project overview](../skills/project-overview-r
 
 ## Is it safe to enable access from another computer?
 
-The MCP endpoint is local-only by default. Optional network access uses **plain HTTP, without TLS provided by KNX-MCP**. Use only a trusted network or VPN, protect the configured access key and do **not** expose this endpoint directly to the public internet.
+The MCP endpoint is local-only by default. Optional network access uses **plain HTTP** unless **HTTPS** is enabled in the app (from 1.2.0.4). Use only a trusted network or VPN, protect the configured access key and do **not** expose this endpoint directly to the public internet.
 
 ## Are my ETS project data sent to a KNX-MCP cloud service?
 
@@ -51,7 +51,7 @@ KNX-MCP operates in ETS and does not route project data through a publisher-oper
 
 ## Why are sender addresses missing in ETS5 telegrams?
 
-In ETS5, telegrams captured directly by KNX-MCP do not contain the sender address. When sender information is needed, use the ETS group monitor with **KNX-MCP as the decoding app**. This is a documented Release 1 limitation, not necessarily a client connection problem.
+In ETS5, telegrams captured directly by KNX-MCP do not contain the sender address. When sender information is needed, use the ETS group monitor with **KNX-MCP as the decoding app**. This is a documented limitation, not necessarily a client connection problem.
 
 ## Is KNX-MCP open source?
 

@@ -2,7 +2,7 @@
 
 **Purpose:** Give the user an inventory of ETS projects available to the connected KNX-MCP client, followed by a concise overview of selected project structures.
 
-**Applicable release:** KNX-MCP 1.1.0.0 (Release 1), ETS5 5.7+ or ETS6.
+**Applicable release:** KNX-MCP 1.1.0.0 or later, ETS5 5.7+ or ETS6.
 
 **Safety level:** Project inspection only. **No project edits, bus reads/writes, device programming or permission changes.**
 

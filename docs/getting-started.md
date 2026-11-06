@@ -1,6 +1,6 @@
 # Getting started with KNX-MCP
 
-This guide covers **KNX-MCP 1.1.0.0 · Release 1**.
+This guide covers **KNX-MCP 1.2.0.4 · Release 2**.
 
 ## 1. Install KNX-MCP
 
@@ -15,7 +15,7 @@ KNX-MCP is currently available free of charge in the KNX Online Shop.
 
 New projects start with **Project MCP switched off**.
 
-In the KNX-MCP panel or ETS toolbar, choose **Switch project MCP on**. Only projects that are switched on are reachable through MCP.
+In the KNX-MCP panel or ETS toolbar, choose **Start project MCP**. In ETS6 the button stays pressed while the project MCP runs; the panel shows **Stopped – please start** while it is off. Only projects whose project MCP runs are reachable through MCP.
 
 Default endpoints:
 
@@ -44,6 +44,8 @@ When you are comfortable with the connection, configure the permission level for
 The KNX-MCP panel shows ready-to-copy client configuration in **Server settings → Client configuration**, including the current access key.
 
 Keep the access key private. The examples below use `<KEY>` as a placeholder.
+
+The templates in the panel send the access key as `Authorization: Bearer` (from 1.2.0.4). The header `X-KnxMcp-Key` used below keeps working. When in doubt, use the configuration shown in the panel.
 
 ### Claude Desktop via `mcp-remote`
 
@@ -96,7 +98,7 @@ KNX-MCP permissions are configured per project and per tool.
 | **Confirmation required** | waits for approval in the ETS panel |
 | **Blocked** | cannot run |
 
-Default behaviour in Release 1:
+Default behaviour:
 
 | Group | Default |
 |---|---|
@@ -134,7 +136,7 @@ If you explicitly enable network access in **Server settings**:
 - keep the access key secret
 - restrict access to trusted systems
 - prefer a VPN or trusted network
-- remember that the KNX-MCP endpoint itself uses **plain HTTP without TLS**
+- enable **HTTPS** in Server settings (from 1.2.0.4), otherwise the endpoint uses **plain HTTP without TLS**
 
 Do not expose the endpoint directly to the public internet.
 
@@ -144,7 +146,7 @@ Do not expose the endpoint directly to the public internet.
 
 Check:
 
-- Project MCP is switched on.
+- Project MCP is started (the panel does not show **Stopped – please start**).
 - The endpoint and port match the ETS version / configured port.
 - The access key is current.
 - No local firewall rule blocks the selected port.

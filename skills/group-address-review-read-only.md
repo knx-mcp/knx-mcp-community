@@ -2,7 +2,7 @@
 
 **Purpose:** Review a selected ETS project's group-address structure and flag items that may need manual investigation.
 
-**Applicable release:** KNX-MCP 1.1.0.0 (Release 1), ETS5 5.7+ or ETS6.
+**Applicable release:** KNX-MCP 1.1.0.0 or later, ETS5 5.7+ or ETS6.
 
 **Safety level:** Project data inspection only. **No project edits, bus reads/writes or device programming.**
 

@@ -22,7 +22,7 @@ This repository is the public community space for **questions, bug reports, feat
 
 | | |
 |---|---|
-| Current version | **1.1.0.0 · Release 1** — validated by KNX |
+| Current version | **1.2.0.4 · Release 2** — validated by KNX |
 | ETS support | **ETS5 (5.7 or later) and ETS6** |
 | Availability | **Currently available free of charge** in the KNX Online Shop |
 | Website | https://knx-mcp.com |
@@ -31,7 +31,7 @@ This repository is the public community space for **questions, bug reports, feat
 ## Start in four steps
 
 1. Get **KNX-MCP** from the [KNX Online Shop](https://my.knx.org/shop?action=search&search=KNX-MCP) and install the ETS App.
-2. Open an ETS project and choose **Switch project MCP on** in KNX-MCP.
+2. Open an ETS project and choose **Start project MCP** in KNX-MCP.
 3. Under **Server settings → Client configuration**, copy the setup for your MCP client. Keep the access key private.
 4. For your first session, enable **Read-only** mode and try:
 
@@ -50,12 +50,12 @@ See [Getting started](docs/getting-started.md) for configuration details and tro
 - **Discussion categories and community guide:** [docs/community-guide.md](docs/community-guide.md)
 - **Bug reports:** https://github.com/knx-mcp/knx-mcp-community/issues
 - **Skills:** [skills/README.md](skills/README.md) · [Project overview](skills/project-overview-read-only.md) · [Group-address review](skills/group-address-review-read-only.md)
-- **App releases:** [Version history](docs/releases.md) · [GitHub Releases](https://github.com/knx-mcp/knx-mcp-community/releases) · [Release 1 notes](docs/release-notes/1.1.0.0.md)
+- **App releases:** [Version history](docs/releases.md) · [GitHub Releases](https://github.com/knx-mcp/knx-mcp-community/releases) · [Release 2 notes](docs/release-notes/1.2.0.4.md) · [Release 1 notes](docs/release-notes/1.1.0.0.md)
 - **Security:** [SECURITY.md](SECURITY.md)
 
 ## App releases and downloads
 
-A [1.2.0.0 community issue plan](docs/roadmap/knx-mcp-1.2.0.0-issue-triage.md) tracks incoming feedback and proposed tests. **This version is planned, not yet released.**
+**KNX-MCP 1.2.0.4 (Release 2)** is validated by KNX and available in the KNX Online Shop — see the [release notes](docs/release-notes/1.2.0.4.md). Corrections found since then follow as a bug-fix release.
 
 
 KNX-MCP app versions are distributed **only through the [KNX Online Shop (MyKNX)](https://my.knx.org/shop?action=search&search=KNX-MCP)**. The [version history](docs/releases.md) and [GitHub Releases](https://github.com/knx-mcp/knx-mcp-community/releases) provide release information; no KNX-MCP ETS App installer or application source code is hosted here.
@@ -87,7 +87,7 @@ KNX-MCP runs locally inside ETS. By default, its MCP endpoint is reachable only 
 
 KNX-MCP does not operate a publisher cloud service through which project data is routed. Project data is provided only to the MCP client that you connect. If that client uses a cloud AI provider, the provider's own terms and privacy rules apply.
 
-Optional network access can be enabled explicitly. The KNX-MCP endpoint uses plain HTTP, so remote access should be limited to a trusted network or VPN and protected with the configured access key.
+Optional network access can be enabled explicitly. The endpoint uses plain HTTP unless HTTPS is enabled in the app (from 1.2.0.4); remote access should in any case be limited to a trusted network or VPN and protected with the configured access key.
 
 ## Community: where to go
 
