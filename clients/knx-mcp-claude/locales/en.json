@@ -1,0 +1,39 @@
+{
+  "display_name": "KNX-MCP",
+  "description": "Connect named KNX ETS endpoints using private profiles or two optional test connections.",
+  "long_description": "Connect Claude Desktop on Windows to KNX-MCP ETS app 1.2.0.4 or a compatible later version. Prefer exported profiles for named ETS5/ETS6 endpoints. Two optional manual connections accept a name, URL and bearer token. HTTPS validates certificates; HTTP requires explicit consent. Uses the host Node.js runtime. ETS permissions and confirmations remain active. Tool results are shared with the AI host.",
+  "user_config": {
+    "connection_files": {
+      "title": "Connection profiles (recommended)",
+      "description": "Select up to 32 KNX-MCP-*.json files exported from the addon. Each contains an access key and a public certificate. Keep the files private. Optional when a complete manual connection is provided."
+    },
+    "manual_1_name": {
+      "title": "Test connection 1 — Name",
+      "description": "Optional test connection. Complete Name, URL and token together or leave all three empty. This name identifies the target in tool titles."
+    },
+    "manual_1_url": {
+      "title": "Test connection 1 — Remote / Local URL",
+      "description": "Explicit http:// or https:// URL with server name/IP and port. /mcp is added if no path is entered. For HTTPS, trust the verified certificate in the supported Windows Trusted store, or use an exported profile instead."
+    },
+    "manual_1_token": {
+      "title": "Test connection 1 — Bearer token",
+      "description": "Enter only the access key, without “Bearer”. Stored as a sensitive host setting. Never include the token in the URL."
+    },
+    "manual_2_name": {
+      "title": "Test connection 2 — Name",
+      "description": "Optional test connection. Complete Name, URL and token together or leave all three empty. This name identifies the target in tool titles."
+    },
+    "manual_2_url": {
+      "title": "Test connection 2 — Remote / Local URL",
+      "description": "Explicit http:// or https:// URL with server name/IP and port. /mcp is added if no path is entered. For HTTPS, trust the verified certificate in the supported Windows Trusted store, or use an exported profile instead."
+    },
+    "manual_2_token": {
+      "title": "Test connection 2 — Bearer token",
+      "description": "Enter only the access key, without “Bearer”. Stored as a sensitive host setting. Never include the token in the URL."
+    },
+    "allow_insecure_http": {
+      "title": "Allow unencrypted HTTP test connections",
+      "description": "Off by default. HTTP exposes access keys and project data in transit. Use only for an intentional local or protected test. HTTPS never falls back to HTTP."
+    }
+  }
+}

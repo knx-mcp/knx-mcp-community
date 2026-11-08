@@ -1,0 +1,39 @@
+{
+  "display_name": "KNX-MCP",
+  "description": "Connectez des instances ETS nommées à partir de profils privés ou de deux connexions de test facultatives.",
+  "long_description": "Connecte Claude Desktop sous Windows à KNX-MCP pour ETS à partir de la version 1.2.0.4. Les profils exportés sont recommandés pour les points de terminaison ETS5/ETS6 nommés. Deux connexions manuelles facultatives acceptent un nom, une URL et un jeton Bearer. HTTPS vérifie les certificats ; HTTP nécessite un consentement explicite. Les autorisations et confirmations ETS restent actives. Les résultats des outils sont transmis au client IA.",
+  "user_config": {
+    "connection_files": {
+      "title": "Profils de connexion (recommandé)",
+      "description": "Sélectionnez jusqu’à 32 fichiers KNX-MCP-*.json exportés depuis l’application ETS. Chaque fichier contient une clé d’accès et un certificat public. Conservez-les dans un dossier privé. Facultatif si une connexion manuelle complète est configurée."
+    },
+    "manual_1_name": {
+      "title": "Connexion de test 1 — Nom",
+      "description": "Connexion de test facultative. Renseignez ensemble le nom, l’URL et le jeton, ou laissez les trois champs vides. Ce nom identifie la cible dans les titres des outils."
+    },
+    "manual_1_url": {
+      "title": "Connexion de test 1 — URL distante / locale",
+      "description": "URL explicite http:// ou https:// avec nom ou adresse IP du serveur et port. /mcp est ajouté si le chemin est absent. Pour HTTPS, installez le certificat vérifié dans un magasin de confiance Windows pris en charge, ou utilisez un profil exporté."
+    },
+    "manual_1_token": {
+      "title": "Connexion de test 1 — Jeton Bearer",
+      "description": "Saisissez uniquement la clé d’accès, sans « Bearer ». Enregistrée comme paramètre sensible par le client hôte. Ne placez jamais le jeton dans l’URL."
+    },
+    "manual_2_name": {
+      "title": "Connexion de test 2 — Nom",
+      "description": "Connexion de test facultative. Renseignez ensemble le nom, l’URL et le jeton, ou laissez les trois champs vides. Ce nom identifie la cible dans les titres des outils."
+    },
+    "manual_2_url": {
+      "title": "Connexion de test 2 — URL distante / locale",
+      "description": "URL explicite http:// ou https:// avec nom ou adresse IP du serveur et port. /mcp est ajouté si le chemin est absent. Pour HTTPS, installez le certificat vérifié dans un magasin de confiance Windows pris en charge, ou utilisez un profil exporté."
+    },
+    "manual_2_token": {
+      "title": "Connexion de test 2 — Jeton Bearer",
+      "description": "Saisissez uniquement la clé d’accès, sans « Bearer ». Enregistrée comme paramètre sensible par le client hôte. Ne placez jamais le jeton dans l’URL."
+    },
+    "allow_insecure_http": {
+      "title": "Autoriser les connexions de test HTTP non chiffrées",
+      "description": "Désactivé par défaut. HTTP transmet la clé d’accès et les données du projet sans chiffrement. Réservé aux tests locaux ou protégés choisis explicitement. HTTPS ne bascule jamais automatiquement vers HTTP."
+    }
+  }
+}

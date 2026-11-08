@@ -18,9 +18,11 @@
 
 > **New in Release 2 (1.2.0.4): improved communication with encryption.** Optional **HTTPS** directly in the app, the access key as `Authorization: Bearer`, several agents at once, and direct connections for Microsoft Scout and GitHub Copilot — in many cases without a proxy or bridge. Plus 21 new tools (97 in total) and help in six languages. [Release notes](docs/release-notes/1.2.0.4.md)
 
+> **New: KNX-MCP for Claude Desktop 1.0.4.** A Claude Desktop extension that connects one or more ETS5/ETS6 instances through exported HTTPS connection profiles — no `mcp-remote` configuration needed. [Download](https://github.com/knx-mcp/knx-mcp-community/releases/tag/claude-v1.0.4) · [Guide](clients/knx-mcp-claude/README.md)
+
 **KNX-MCP** is an ETS App that connects an open ETS project to MCP-compatible AI assistants such as Claude, Microsoft Copilot or ChatGPT through the **Model Context Protocol (MCP)** and the official ETS SDK.
 
-This repository is the public community space for **questions, bug reports, feature ideas, setup help, reusable skills and release information**. It does **not** contain the source code of KNX-MCP.
+This repository is the public community space for **questions, bug reports, feature ideas, setup help, reusable skills and release information**. It does **not** contain the source code of the KNX-MCP ETS App. The open-source [Claude Desktop extension](clients/knx-mcp-claude/README.md) is published here under the MIT license.
 
 | | |
 |---|---|
@@ -47,6 +49,7 @@ See [Getting started](docs/getting-started.md) for configuration details and tro
 - **Get KNX-MCP:** https://my.knx.org/shop?action=search&search=KNX-MCP
 - **Website:** https://knx-mcp.com
 - **Getting started:** [docs/getting-started.md](docs/getting-started.md)
+- **Claude Desktop extension:** [guide](clients/knx-mcp-claude/README.md) · [download 1.0.4](https://github.com/knx-mcp/knx-mcp-community/releases/tag/claude-v1.0.4)
 - **Frequently asked questions:** [docs/faq.md](docs/faq.md)
 - **Questions & workflows:** https://github.com/knx-mcp/knx-mcp-community/discussions
 - **Discussion categories and community guide:** [docs/community-guide.md](docs/community-guide.md)
@@ -61,6 +64,8 @@ See [Getting started](docs/getting-started.md) for configuration details and tro
 
 
 KNX-MCP app versions are distributed **only through the [KNX Online Shop (MyKNX)](https://my.knx.org/shop?action=search&search=KNX-MCP)**. The [version history](docs/releases.md) and [GitHub Releases](https://github.com/knx-mcp/knx-mcp-community/releases) provide release information; no KNX-MCP ETS App installer or application source code is hosted here.
+
+The **KNX-MCP Claude Desktop extension** is the exception: an independent client with its own version number. Its package `KNX-MCP-1.0.4.mcpb`, the checksum and a source archive are attached to the [GitHub release `claude-v1.0.4`](https://github.com/knx-mcp/knx-mcp-community/releases/tag/claude-v1.0.4); the source is in [`clients/knx-mcp-claude`](clients/knx-mcp-claude/).
 
 ## What KNX-MCP does
 
@@ -121,6 +126,6 @@ A short German overview is available in [docs/README-de.md](docs/README-de.md).
 
 ## License and trademarks
 
-KNX-MCP is licensed under its End User License Agreement, available in MyKNX with the app. This repository contains community documentation and examples; it does not contain the KNX-MCP application source code.
+KNX-MCP is licensed under its End User License Agreement, available in MyKNX with the app. This repository contains community documentation and examples; it does not contain the KNX-MCP application source code. The Claude Desktop extension in [`clients/knx-mcp-claude`](clients/knx-mcp-claude/) is licensed under the [MIT license](clients/knx-mcp-claude/LICENSE.txt); its icon is covered by a [separate asset license](clients/knx-mcp-claude/assets/LICENSE.txt).
 
 KNX and ETS are trademarks of KNX Association. **KNX-MCP is a software product by Gerald Docenko and is not a product of KNX Association.**

@@ -1,0 +1,118 @@
+{
+  "manifest_version": "0.3",
+  "name": "knx-mcp-claude",
+  "display_name": "KNX-MCP",
+  "version": "1.0.4",
+  "description": "Connect named KNX ETS endpoints using private profiles or two optional test connections.",
+  "long_description": "Connect Claude Desktop on Windows to KNX-MCP ETS app 1.2.0.4 or a compatible later version. Prefer exported profiles for named ETS5/ETS6 endpoints. Two optional manual connections accept a name, URL and bearer token. HTTPS validates certificates; HTTP requires explicit consent. Uses the host Node.js runtime. ETS permissions and confirmations remain active. Tool results are shared with the AI host.",
+  "author": {
+    "name": "Gerald Docenko",
+    "email": "support@knx-mcp.com",
+    "url": "https://knx-mcp.com/"
+  },
+  "homepage": "https://knx-mcp.com/",
+  "server": {
+    "type": "node",
+    "entry_point": "server/index.js",
+    "mcp_config": {
+      "command": "node",
+      "args": [
+        "${__dirname}/server/index.js",
+        "${user_config.connection_files}"
+      ],
+      "env": {
+        "KNX_MCP_MANUAL_1_NAME": "${user_config.manual_1_name}",
+        "KNX_MCP_MANUAL_1_URL": "${user_config.manual_1_url}",
+        "KNX_MCP_MANUAL_1_TOKEN": "${user_config.manual_1_token}",
+        "KNX_MCP_MANUAL_2_NAME": "${user_config.manual_2_name}",
+        "KNX_MCP_MANUAL_2_URL": "${user_config.manual_2_url}",
+        "KNX_MCP_MANUAL_2_TOKEN": "${user_config.manual_2_token}",
+        "KNX_MCP_ALLOW_HTTP": "${user_config.allow_insecure_http}"
+      }
+    }
+  },
+  "tools_generated": true,
+  "compatibility": {
+    "platforms": [
+      "win32"
+    ],
+    "runtimes": {
+      "node": ">=22.16.0"
+    }
+  },
+  "localization": {
+    "resources": "locales/${locale}.json",
+    "default_locale": "en"
+  },
+  "user_config": {
+    "connection_files": {
+      "title": "Connection profiles (recommended)",
+      "description": "Select up to 32 KNX-MCP-*.json files exported from the addon. Each contains an access key and a public certificate. Keep the files private. Optional when a complete manual connection is provided.",
+      "type": "file",
+      "required": false,
+      "multiple": true,
+      "default": []
+    },
+    "manual_1_name": {
+      "title": "Test connection 1 — Name",
+      "description": "Optional test connection. Complete Name, URL and token together or leave all three empty. This name identifies the target in tool titles.",
+      "type": "string",
+      "required": false,
+      "default": ""
+    },
+    "manual_1_url": {
+      "title": "Test connection 1 — Remote / Local URL",
+      "description": "Explicit http:// or https:// URL with server name/IP and port. /mcp is added if no path is entered. For HTTPS, trust the verified certificate in the supported Windows Trusted store, or use an exported profile instead.",
+      "type": "string",
+      "required": false,
+      "default": ""
+    },
+    "manual_1_token": {
+      "title": "Test connection 1 — Bearer token",
+      "description": "Enter only the access key, without “Bearer”. Stored as a sensitive host setting. Never include the token in the URL.",
+      "type": "string",
+      "required": false,
+      "default": "",
+      "sensitive": true
+    },
+    "manual_2_name": {
+      "title": "Test connection 2 — Name",
+      "description": "Optional test connection. Complete Name, URL and token together or leave all three empty. This name identifies the target in tool titles.",
+      "type": "string",
+      "required": false,
+      "default": ""
+    },
+    "manual_2_url": {
+      "title": "Test connection 2 — Remote / Local URL",
+      "description": "Explicit http:// or https:// URL with server name/IP and port. /mcp is added if no path is entered. For HTTPS, trust the verified certificate in the supported Windows Trusted store, or use an exported profile instead.",
+      "type": "string",
+      "required": false,
+      "default": ""
+    },
+    "manual_2_token": {
+      "title": "Test connection 2 — Bearer token",
+      "description": "Enter only the access key, without “Bearer”. Stored as a sensitive host setting. Never include the token in the URL.",
+      "type": "string",
+      "required": false,
+      "default": "",
+      "sensitive": true
+    },
+    "allow_insecure_http": {
+      "title": "Allow unencrypted HTTP test connections",
+      "description": "Off by default. HTTP exposes access keys and project data in transit. Use only for an intentional local or protected test. HTTPS never falls back to HTTP.",
+      "type": "boolean",
+      "required": false,
+      "default": false
+    }
+  },
+  "icon": "assets/icon.png",
+  "privacy_policies": [],
+  "keywords": [
+    "KNX",
+    "ETS",
+    "building automation",
+    "project diagnostics"
+  ],
+  "support": "https://github.com/knx-mcp/knx-mcp-community/issues",
+  "license": "MIT"
+}

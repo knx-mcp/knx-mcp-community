@@ -69,6 +69,10 @@ Claude Code, GitHub Copilot, Microsoft Scout and other clients that support Stre
 
 With HTTPS enabled (see section 8), use the `https://` address shown in the panel.
 
+### Claude Desktop: the KNX-MCP extension (recommended)
+
+For Claude Desktop on Windows, install the **KNX-MCP extension** (`KNX-MCP-1.0.4.mcpb`) from the [GitHub release `claude-v1.0.4`](https://github.com/knx-mcp/knx-mcp-community/releases/tag/claude-v1.0.4). In KNX-MCP, enable HTTPS and export a connection profile under **Server settings**; select the profile in the extension settings in Claude. Up to 32 ETS endpoints can be connected, each with its own access key and certificate. No `mcp-remote` or Node.js configuration is needed. See the [extension guide](../clients/knx-mcp-claude/README.md) for setup, updates and troubleshooting.
+
 ### Claude Desktop and other clients via `mcp-remote`
 
 Clients that only start local programs can use `mcp-remote` as the HTTP bridge. This requires Node.js. The access key is passed through an environment variable, so the space in the Bearer value is not part of the command arguments:
@@ -94,7 +98,7 @@ Clients that only start local programs can use `mcp-remote` as the HTTP bridge. 
 }
 ```
 
-`--allow-http` is only needed for an `http://` address. For ETS5, use port `51950` unless you changed it in KNX-MCP. For Claude Desktop the panel can also export a connection profile for the Claude extension.
+`--allow-http` is only needed for an `http://` address. For ETS5, use port `51950` unless you changed it in KNX-MCP. For Claude Desktop the KNX-MCP extension above is the simpler way.
 
 ## 5. Understand permissions
 
