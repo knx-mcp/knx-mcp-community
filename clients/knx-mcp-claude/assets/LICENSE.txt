@@ -1,0 +1,8 @@
+KNX-MCP branding assets
+Copyright (c) 2026 Gerald Docenko. All rights reserved.
+
+The supplied icon may be reproduced unchanged with the official KNX-MCP
+client package and in documentation identifying that package. It is excluded
+from the software's MIT license. No permission is granted to imply endorsement
+of another product or to use third-party trademarks beyond applicable rights.
+The software license does not require use of this branding in modified builds.

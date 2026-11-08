@@ -1,0 +1,39 @@
+{
+  "display_name": "KNX-MCP",
+  "description": "Collega endpoint KNX ETS denominati tramite profili privati o due connessioni di prova facoltative.",
+  "long_description": "Collega Claude Desktop su Windows a KNX-MCP per ETS dalla versione 1.2.0.4. Si consigliano profili esportati per endpoint ETS5/ETS6 con nome. Due connessioni manuali facoltative accettano nome, URL e token Bearer. HTTPS verifica i certificati; HTTP richiede il consenso esplicito. Le autorizzazioni e le conferme di ETS restano attive. I risultati degli strumenti vengono trasmessi al client AI.",
+  "user_config": {
+    "connection_files": {
+      "title": "Profili di connessione (consigliato)",
+      "description": "Selezionare fino a 32 file KNX-MCP-*.json esportati dall’add-on. Ogni file contiene una chiave di accesso e un certificato pubblico. Conservarli privatamente. Facoltativo se è configurata una connessione manuale completa."
+    },
+    "manual_1_name": {
+      "title": "Connessione di prova 1 — Nome",
+      "description": "Connessione di prova facoltativa. Compilare insieme nome, URL e token oppure lasciare vuoti tutti e tre. Il nome identifica la destinazione nei titoli degli strumenti."
+    },
+    "manual_1_url": {
+      "title": "Connessione di prova 1 — Remote / Local URL",
+      "description": "URL esplicito http:// o https:// con nome PC/IP e porta. Senza percorso viene aggiunto /mcp. Per HTTPS rendere attendibile il certificato verificato nell’archivio Windows Trusted supportato oppure usare un profilo esportato."
+    },
+    "manual_1_token": {
+      "title": "Connessione di prova 1 — Bearer token",
+      "description": "Inserire solo la chiave di accesso, senza “Bearer”. Memorizzata come impostazione sensibile dell’host. Non inserire mai il token nell’URL."
+    },
+    "manual_2_name": {
+      "title": "Connessione di prova 2 — Nome",
+      "description": "Connessione di prova facoltativa. Compilare insieme nome, URL e token oppure lasciare vuoti tutti e tre. Il nome identifica la destinazione nei titoli degli strumenti."
+    },
+    "manual_2_url": {
+      "title": "Connessione di prova 2 — Remote / Local URL",
+      "description": "URL esplicito http:// o https:// con nome PC/IP e porta. Senza percorso viene aggiunto /mcp. Per HTTPS rendere attendibile il certificato verificato nell’archivio Windows Trusted supportato oppure usare un profilo esportato."
+    },
+    "manual_2_token": {
+      "title": "Connessione di prova 2 — Bearer token",
+      "description": "Inserire solo la chiave di accesso, senza “Bearer”. Memorizzata come impostazione sensibile dell’host. Non inserire mai il token nell’URL."
+    },
+    "allow_insecure_http": {
+      "title": "Consenti HTTP non cifrato per le connessioni di prova",
+      "description": "Disattivato per impostazione predefinita. HTTP espone chiavi di accesso e dati di progetto durante il trasferimento. Solo per prove locali o protette intenzionali. Nessun passaggio automatico da HTTPS a HTTP."
+    }
+  }
+}

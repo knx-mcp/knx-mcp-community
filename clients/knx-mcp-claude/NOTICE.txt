@@ -1,0 +1,18 @@
+KNX-MCP for Claude Desktop
+Copyright (c) 2026 Gerald Docenko
+Publisher and support: Gerald Docenko — support@knx-mcp.com — https://knx-mcp.com/
+
+LICENSE.txt covers the independent client software and its accompanying text
+material in this directory. It does not license the proprietary KNX-MCP ETS
+application, its Core/SDK code, ETS installers, personal connection profiles,
+or any other directory of the development repository.
+Branding assets have separate terms in assets/LICENSE.txt.
+
+No third-party JavaScript runtime packages are included. Node.js is supplied
+separately by the host. Build-time formatters and validators are not runtime
+components. KNX and ETS are trademarks of KNX Association. Claude is a product
+of Anthropic. Interoperability references do not imply endorsement or approval.
+
+Version and publisher: manifest.json. Preparation date and ETS baseline:
+release-info.json. Built packages include build-info.json and a source fingerprint.
+Client and ETS App versions are independent.

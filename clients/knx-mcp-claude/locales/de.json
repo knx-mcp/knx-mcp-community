@@ -1,0 +1,39 @@
+{
+  "display_name": "KNX-MCP",
+  "description": "Benannte KNX-ETS-Endpunkte über private Profile oder zwei optionale Testverbindungen anbinden.",
+  "long_description": "Verbindet Claude Desktop unter Windows mit KNX-MCP für ETS ab Version 1.2.0.4. Exportierte Profile für benannte ETS5-/ETS6-Endpunkte werden empfohlen. Zwei optionale manuelle Verbindungen mit Name, URL und Bearer-Token. HTTPS prüft Zertifikate; HTTP erfordert ausdrückliche Zustimmung. ETS-Berechtigungen und Bestätigungen bleiben wirksam. Werkzeugergebnisse werden an den KI-Host weitergegeben.",
+  "user_config": {
+    "connection_files": {
+      "title": "Verbindungsprofile (empfohlen)",
+      "description": "Bis zu 32 aus dem Add-on exportierte KNX-MCP-*.json-Dateien auswählen. Jede enthält Zugangsschlüssel und öffentliches Zertifikat. Dateien privat aufbewahren. Optional bei vollständig ausgefüllter manueller Verbindung."
+    },
+    "manual_1_name": {
+      "title": "Testverbindung 1 — Name",
+      "description": "Optionale Testverbindung. Name, URL und Token gemeinsam ausfüllen oder alle drei leer lassen. Dieser Name kennzeichnet das Ziel bei den Werkzeugen."
+    },
+    "manual_1_url": {
+      "title": "Testverbindung 1 — Remote / Local URL",
+      "description": "Vollständige http://- oder https://-URL mit PC-Name/IP und Port. Ohne Pfad wird /mcp ergänzt. Bei HTTPS dem geprüften Zertifikat im unterstützten Windows-Trusted-Speicher vertrauen oder stattdessen ein exportiertes Profil verwenden."
+    },
+    "manual_1_token": {
+      "title": "Testverbindung 1 — Bearer token",
+      "description": "Nur den Zugangsschlüssel ohne „Bearer“ eingeben. Wird als sensible Host-Einstellung gespeichert. Den Token niemals in die URL schreiben."
+    },
+    "manual_2_name": {
+      "title": "Testverbindung 2 — Name",
+      "description": "Optionale Testverbindung. Name, URL und Token gemeinsam ausfüllen oder alle drei leer lassen. Dieser Name kennzeichnet das Ziel bei den Werkzeugen."
+    },
+    "manual_2_url": {
+      "title": "Testverbindung 2 — Remote / Local URL",
+      "description": "Vollständige http://- oder https://-URL mit PC-Name/IP und Port. Ohne Pfad wird /mcp ergänzt. Bei HTTPS dem geprüften Zertifikat im unterstützten Windows-Trusted-Speicher vertrauen oder stattdessen ein exportiertes Profil verwenden."
+    },
+    "manual_2_token": {
+      "title": "Testverbindung 2 — Bearer token",
+      "description": "Nur den Zugangsschlüssel ohne „Bearer“ eingeben. Wird als sensible Host-Einstellung gespeichert. Den Token niemals in die URL schreiben."
+    },
+    "allow_insecure_http": {
+      "title": "Unverschlüsseltes HTTP für Testverbindungen erlauben",
+      "description": "Standardmäßig aus. Bei HTTP sind Zugangsschlüssel und Projektdaten auf dem Übertragungsweg unverschlüsselt. Nur für bewusste lokale oder geschützte Tests. Kein automatischer Wechsel von HTTPS auf HTTP."
+    }
+  }
+}

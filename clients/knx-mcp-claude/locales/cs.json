@@ -1,0 +1,39 @@
+{
+  "display_name": "KNX-MCP",
+  "description": "Připojení pojmenovaných koncových bodů KNX ETS pomocí soukromých profilů nebo dvou volitelných testovacích připojení.",
+  "long_description": "Propojuje Claude Desktop ve Windows s aplikací KNX-MCP pro ETS od verze 1.2.0.4. Doporučujeme exportované profily pro pojmenované koncové body ETS5/ETS6. Dvě volitelná ruční připojení obsahují název, URL a token Bearer. HTTPS ověřuje certifikáty; HTTP vyžaduje výslovný souhlas. Oprávnění a potvrzení v ETS zůstávají platná. Výsledky nástrojů jsou předávány hostiteli AI.",
+  "user_config": {
+    "connection_files": {
+      "title": "Profily připojení (doporučeno)",
+      "description": "Vyberte až 32 souborů KNX-MCP-*.json exportovaných z doplňku. Každý obsahuje přístupový klíč a veřejný certifikát. Uchovávejte je soukromě. Volitelné při úplně zadaném ručním připojení."
+    },
+    "manual_1_name": {
+      "title": "Testovací připojení 1 — Název",
+      "description": "Volitelné testovací připojení. Zadejte název, URL a token společně, nebo ponechte všechna tři pole prázdná. Název označuje cíl v názvech nástrojů."
+    },
+    "manual_1_url": {
+      "title": "Testovací připojení 1 — Remote / Local URL",
+      "description": "Úplná adresa http:// nebo https:// s názvem počítače/IP a portem. Bez cesty se doplní /mcp. Pro HTTPS nastavte důvěru ověřenému certifikátu v podporovaném úložišti Windows Trusted, nebo použijte exportovaný profil."
+    },
+    "manual_1_token": {
+      "title": "Testovací připojení 1 — Bearer token",
+      "description": "Zadejte pouze přístupový klíč bez slova „Bearer“. Hostitel jej ukládá jako citlivé nastavení. Token nikdy neuvádějte v URL."
+    },
+    "manual_2_name": {
+      "title": "Testovací připojení 2 — Název",
+      "description": "Volitelné testovací připojení. Zadejte název, URL a token společně, nebo ponechte všechna tři pole prázdná. Název označuje cíl v názvech nástrojů."
+    },
+    "manual_2_url": {
+      "title": "Testovací připojení 2 — Remote / Local URL",
+      "description": "Úplná adresa http:// nebo https:// s názvem počítače/IP a portem. Bez cesty se doplní /mcp. Pro HTTPS nastavte důvěru ověřenému certifikátu v podporovaném úložišti Windows Trusted, nebo použijte exportovaný profil."
+    },
+    "manual_2_token": {
+      "title": "Testovací připojení 2 — Bearer token",
+      "description": "Zadejte pouze přístupový klíč bez slova „Bearer“. Hostitel jej ukládá jako citlivé nastavení. Token nikdy neuvádějte v URL."
+    },
+    "allow_insecure_http": {
+      "title": "Povolit nešifrované HTTP pro testovací připojení",
+      "description": "Ve výchozím stavu vypnuto. HTTP přenáší přístupové klíče a projektová data nešifrovaně. Pouze pro vědomé místní nebo chráněné testování. HTTPS nikdy automaticky nepřejde na HTTP."
+    }
+  }
+}

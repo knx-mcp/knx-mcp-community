@@ -4,6 +4,8 @@
 
 > **Neu in Release 2 (1.2.0.4): verbesserte Kommunikation mit Verschlüsselung.** Optional **HTTPS** direkt in der App, der Zugangsschlüssel als `Authorization: Bearer`, mehrere Agenten gleichzeitig und direkte Verbindung für Microsoft Scout und GitHub Copilot – oft ohne Proxy oder Brücke. Dazu 21 neue Werkzeuge (insgesamt 97) und Hilfe in sechs Sprachen. [Release Notes (Englisch)](release-notes/1.2.0.4.md)
 
+> **Neu: KNX-MCP für Claude Desktop 1.0.4.** Eine Erweiterung für Claude Desktop, die eine oder mehrere ETS5-/ETS6-Instanzen über exportierte HTTPS-Verbindungsprofile anbindet – ohne `mcp-remote`-Konfiguration. [Download](https://github.com/knx-mcp/knx-mcp-community/releases/tag/claude-v1.0.4) · [Anleitung](../clients/knx-mcp-claude/README.de.md)
+
 Aktuelle Version: **1.2.0.4 · Release 2**  
 Unterstützt: **ETS5 ab 5.7 und ETS6**  
 Bezug: derzeit **kostenlos** über den KNX Online Shop.
@@ -17,7 +19,7 @@ Bezug: derzeit **kostenlos** über den KNX Online Shop.
 - wiederverwendbare Skills und Prompts
 - Versionshinweise
 
-Der Quellcode der KNX-MCP-App ist **nicht** Bestandteil dieses öffentlichen Repositories.
+Der Quellcode der KNX-MCP-App ist **nicht** Bestandteil dieses öffentlichen Repositories. Die Claude-Desktop-Erweiterung liegt dagegen quelloffen unter MIT-Lizenz in [`clients/knx-mcp-claude`](../clients/knx-mcp-claude/README.de.md).
 
 ## Kontrolle und Sicherheit
 
@@ -37,6 +39,7 @@ Bitte keine KNX-Projektdateien, Kundendaten, Passwörter, Zugangsschlüssel oder
 ## Weitere Anleitungen
 
 - [Installation und Verbindung (Englisch)](getting-started.md)
+- [KNX-MCP für Claude Desktop](../clients/knx-mcp-claude/README.de.md)
 - [Häufige Fragen / FAQ (Englisch)](faq.md)
 - [KNX-MCP Skills und Praxisabläufe (Englisch)](../skills/README.md)
 - [Projektübersicht nur lesend (Englisch)](../skills/project-overview-read-only.md)
