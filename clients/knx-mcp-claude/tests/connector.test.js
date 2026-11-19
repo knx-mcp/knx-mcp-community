@@ -126,6 +126,7 @@ async function mock(name, accessKey, certificate = pem) {
     writes: 0,
     init: 0,
     rejectWrites: false,
+    structuredOnly: false,
     seen: [],
   };
   const tools = [
@@ -215,7 +216,7 @@ async function mock(name, accessKey, certificate = pem) {
               ? { projects: [{ name, key: name + '-key' }] }
               : { site: name, answer: 42 };
           result = {
-            content: [{ type: 'text', text: JSON.stringify({ data }) }],
+            content: state.structuredOnly ? [] : [{ type: 'text', text: JSON.stringify({ data }) }],
             structuredContent: { data },
             isError: false,
           };
@@ -465,6 +466,54 @@ test('Already queued reads and writes cannot discharge the recovery barrier', as
   }
 });
 
+test('A recheck after the read notice clears the barrier without a forced failure', async () => {
+  const a = await mock('notice', 'key');
+  const c = await initialized([file(profile(a.port, '1'))]);
+  try {
+    a.state.sessions.clear();
+    const first = await call(c, route(c, 'ets_list_projects'));
+    assert(first.content[0].text.startsWith('SESSION_RECOVERED'));
+    await call(c, route(c, 'test_read'), { project: 'notice-key' });
+    assert.equal((await call(c, route(c, 'test_write'), { project: 'notice-key' })).isError, false);
+    assert.equal(a.state.writes, 1);
+  } finally {
+    c.close();
+  }
+});
+
+test('Calls sent together with the noticed read do not count as a recheck', async () => {
+  const a = await mock('batch', 'key');
+  const c = await initialized([file(profile(a.port, '3'))]);
+  try {
+    a.state.sessions.clear();
+    const replies = await Promise.all([
+      call(c, route(c, 'ets_list_projects')),
+      call(c, route(c, 'test_read'), { project: 'batch-key' }),
+      call(c, route(c, 'test_write'), { project: 'batch-key' }),
+    ]);
+    assert(replies[2].isError);
+    assert.equal(a.state.writes, 0);
+    await call(c, route(c, 'test_read'), { project: 'batch-key' });
+    assert.equal((await call(c, route(c, 'test_write'), { project: 'batch-key' })).isError, false);
+  } finally {
+    c.close();
+  }
+});
+
+test('The read notice keeps structured-only data visible as text', async () => {
+  const a = await mock('structured', 'key');
+  const c = await initialized([file(profile(a.port, '8'))]);
+  try {
+    a.state.structuredOnly = true;
+    a.state.sessions.clear();
+    const reply = await call(c, route(c, 'ets_list_projects'));
+    assert(reply.content[0].text.startsWith('SESSION_RECOVERED'));
+    assert(reply.content.some((x) => x.text.includes('structured-key')));
+  } finally {
+    c.close();
+  }
+});
+
 test('Single-file credentials override no environment values and never enter status or identity records', async () => {
   const secret = 'private-"quoted"-back\\slash';
   const a = await mock('private-file', secret);
@@ -515,7 +564,7 @@ test('Old profiles require explicit re-export; absent or malformed embedded keys
     ' key',
     'key ',
     'bad\r\nheader',
-    'bad-\u0100',
+    'bad-\u005Cu0100',
     'x'.repeat(4097),
   ]) {
     assert.throws(
