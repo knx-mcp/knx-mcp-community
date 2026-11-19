@@ -1,6 +1,6 @@
 # Getting started with KNX-MCP
 
-This guide covers **KNX-MCP 1.2.0.4 · Release 2**.
+This guide covers **KNX-MCP 1.2.1.0** (bug-fix release of Release 2).
 
 > **New in Release 2: improved communication with encryption.** HTTPS directly in the app (optional), the access key as `Authorization: Bearer`, several agents at once, and direct connections for Microsoft Scout and GitHub Copilot. In many cases no proxy or bridge is needed any more.
 
@@ -71,7 +71,7 @@ With HTTPS enabled (see section 8), use the `https://` address shown in the pane
 
 ### Claude Desktop: the KNX-MCP extension (recommended)
 
-For Claude Desktop on Windows, install the **KNX-MCP extension** (`KNX-MCP-1.0.4.mcpb`) from the [GitHub release `claude-v1.0.4`](https://github.com/knx-mcp/knx-mcp-community/releases/tag/claude-v1.0.4). In KNX-MCP, enable HTTPS and export a connection profile under **Server settings**; select the profile in the extension settings in Claude. Up to 32 ETS endpoints can be connected, each with its own access key and certificate. No `mcp-remote` or Node.js configuration is needed. See the [extension guide](../clients/knx-mcp-claude/README.md) for setup, updates and troubleshooting.
+For Claude Desktop on Windows, install the **KNX-MCP extension** (`KNX-MCP-1.0.5.mcpb`) from the [GitHub release `claude-v1.0.5`](https://github.com/knx-mcp/knx-mcp-community/releases/tag/claude-v1.0.5). In KNX-MCP, enable HTTPS and export a connection profile under **Server settings**; select the profile in the extension settings in Claude. Up to 32 ETS endpoints can be connected, each with its own access key and certificate. No `mcp-remote` or Node.js configuration is needed. See the [extension guide](../clients/knx-mcp-claude/README.md) for setup, updates and troubleshooting.
 
 ### Claude Desktop and other clients via `mcp-remote`
 
