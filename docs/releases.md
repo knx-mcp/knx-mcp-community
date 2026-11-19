@@ -4,6 +4,7 @@ This community repository documents official **KNX-MCP ETS App** releases. The a
 
 | KNX-MCP version | Release | Supported ETS versions | Release information |
 |---|---|---|---|
+| **1.2.1.0** | Bug-fix release · November 2026 — fixes, program files **signed through Microsoft** | ETS5 5.7+ and ETS6 | [Release notes](release-notes/1.2.1.0.md) · [GitHub release with PDF (EN/DE)](https://github.com/knx-mcp/knx-mcp-community/releases/tag/app-v1.2.1.0) |
 | **1.2.0.4** | Release 2 · November 2026 — improved communication, **HTTPS** | ETS5 5.7+ and ETS6 | [Release notes](release-notes/1.2.0.4.md) · [GitHub release with PDF (EN/DE)](https://github.com/knx-mcp/knx-mcp-community/releases/tag/app-v1.2.0.4) |
 | **1.1.0.0** | Release 1 · October 2026 | ETS5 5.7+ and ETS6 | [Release notes](release-notes/1.1.0.0.md) |
 
@@ -15,13 +16,14 @@ The Claude Desktop extension is an independent, open-source client (MIT license)
 
 | Extension version | Release | Compatible ETS App | Downloads |
 |---|---|---|---|
+| **1.0.5** | Update · November 2026 — smoother recheck after an ETS restart | KNX-MCP 1.2.0.4 and later | [GitHub release `claude-v1.0.5`](https://github.com/knx-mcp/knx-mcp-community/releases/tag/claude-v1.0.5): `KNX-MCP-1.0.5.mcpb`, SHA256 checksum |
 | **1.0.4** | Initial release · November 2026 | KNX-MCP 1.2.0.4 and later | [GitHub release `claude-v1.0.4`](https://github.com/knx-mcp/knx-mcp-community/releases/tag/claude-v1.0.4): `KNX-MCP-1.0.4.mcpb`, SHA256 checksum, source archive |
 
 Source, guides and release notes: [`clients/knx-mcp-claude`](../clients/knx-mcp-claude/README.md). Extension releases use tags `claude-v…`; ETS App releases use `app-v…`.
 
 ## Next app version
 
-Corrections found after 1.2.0.4 are collected in the community issues and follow as a bug-fix release. Issues marked `status:ready-for-test` are fixed in a released or upcoming version and are closed after a retest. The [1.2.0.0 issue triage](roadmap/knx-mcp-1.2.0.0-issue-triage.md) is kept for reference; its candidates were delivered with 1.2.0.4.
+Corrections found after 1.2.1.0 are collected in the community issues and follow as further bug-fix releases. Issues marked `status:ready-for-test` are fixed in a released or upcoming version and are closed after a retest. The [1.2.0.0 issue triage](roadmap/knx-mcp-1.2.0.0-issue-triage.md) is kept for reference; its candidates were delivered with 1.2.0.4.
 
 ## What GitHub Releases contain
 

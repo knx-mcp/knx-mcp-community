@@ -1,6 +1,6 @@
 # KNX-MCP Community FAQ
 
-Applies to **KNX-MCP 1.2.0.4 (Release 2)** for **ETS5 5.7 or later and ETS6**. The documentation shipped with your installed app remains authoritative for your version.
+Applies to **KNX-MCP 1.2.1.0** for **ETS5 5.7 or later and ETS6**. The documentation shipped with your installed app remains authoritative for your version.
 
 ## Where can I get KNX-MCP?
 
@@ -26,6 +26,10 @@ KNX-MCP exposes an MCP endpoint using **Streamable HTTP**. MCP clients that supp
 ## Do I need additional skills or prompts?
 
 **No.** KNX-MCP exposes its MCP tools and descriptions directly. Optional [community skills](../skills/README.md) provide repeatable workflows; they are not required for basic use and cannot override ETS or KNX-MCP permissions.
+
+## The app does not load on Windows 11 with Smart App Control
+
+Up to 1.2.0.4 the KNX-MCP program files were not code-signed, and Windows 11 with **Smart App Control** switched on refused to load them – the app did not appear after installing it. From **1.2.1.0** the program files are signed through Microsoft and load with Smart App Control switched on. If an earlier attempt left the folder `M037B-A02D7` and the file `M037B-A02D7.signature` behind in `C:\ProgramData\KNX\ETS6\Apps\AddIns` (ETS5: `…\ETS5\Apps\AddIns`), close ETS completely, delete both and install the app again.
 
 ## Why does my AI client not see the project?
 

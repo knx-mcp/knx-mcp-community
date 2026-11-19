@@ -16,9 +16,9 @@
   <a href="https://github.com/knx-mcp/knx-mcp-community/discussions">Discussions</a>
 </p>
 
-> **New in Release 2 (1.2.0.4): improved communication with encryption.** Optional **HTTPS** directly in the app, the access key as `Authorization: Bearer`, several agents at once, and direct connections for Microsoft Scout and GitHub Copilot — in many cases without a proxy or bridge. Plus 21 new tools (97 in total) and help in six languages. [Release notes](docs/release-notes/1.2.0.4.md)
+> **New in 1.2.1.0: bug fixes and program files signed through Microsoft** — KNX-MCP now also starts on Windows 11 with Smart App Control switched on. [Release notes](docs/release-notes/1.2.1.0.md)
 
-> **New: KNX-MCP for Claude Desktop 1.0.4.** A Claude Desktop extension that connects one or more ETS5/ETS6 instances through exported HTTPS connection profiles — no `mcp-remote` configuration needed. [Download](https://github.com/knx-mcp/knx-mcp-community/releases/tag/claude-v1.0.4) · [Guide](clients/knx-mcp-claude/README.md)
+> **KNX-MCP for Claude Desktop 1.0.5.** A Claude Desktop extension that connects one or more ETS5/ETS6 instances through exported HTTPS connection profiles — no `mcp-remote` configuration needed. 1.0.5 rechecks smoothly after an ETS restart. [Download](https://github.com/knx-mcp/knx-mcp-community/releases/tag/claude-v1.0.5) · [Guide](clients/knx-mcp-claude/README.md)
 
 **KNX-MCP** is an ETS App that connects an open ETS project to MCP-compatible AI assistants such as Claude, Microsoft Copilot or ChatGPT through the **Model Context Protocol (MCP)** and the official ETS SDK.
 
@@ -26,7 +26,7 @@ This repository is the public community space for **questions, bug reports, feat
 
 | | |
 |---|---|
-| Current version | **1.2.0.4 · Release 2** — validated by KNX · [what's new](docs/release-notes/1.2.0.4.md) |
+| Current version | **1.2.1.0** — bug-fix release, validated by KNX · [what's new](docs/release-notes/1.2.1.0.md) |
 | ETS support | **ETS5 (5.7 or later) and ETS6** |
 | Availability | **Currently available free of charge** in the KNX Online Shop |
 | Website | https://knx-mcp.com |
@@ -49,23 +49,23 @@ See [Getting started](docs/getting-started.md) for configuration details and tro
 - **Get KNX-MCP:** https://my.knx.org/shop?action=search&search=KNX-MCP
 - **Website:** https://knx-mcp.com
 - **Getting started:** [docs/getting-started.md](docs/getting-started.md)
-- **Claude Desktop extension:** [guide](clients/knx-mcp-claude/README.md) · [download 1.0.4](https://github.com/knx-mcp/knx-mcp-community/releases/tag/claude-v1.0.4)
+- **Claude Desktop extension:** [guide](clients/knx-mcp-claude/README.md) · [download 1.0.5](https://github.com/knx-mcp/knx-mcp-community/releases/tag/claude-v1.0.5)
 - **Frequently asked questions:** [docs/faq.md](docs/faq.md)
 - **Questions & workflows:** https://github.com/knx-mcp/knx-mcp-community/discussions
 - **Discussion categories and community guide:** [docs/community-guide.md](docs/community-guide.md)
 - **Bug reports:** https://github.com/knx-mcp/knx-mcp-community/issues
 - **Skills:** [skills/README.md](skills/README.md) · [Project overview](skills/project-overview-read-only.md) · [Group-address review](skills/group-address-review-read-only.md)
-- **App releases:** [Version history](docs/releases.md) · [GitHub Releases](https://github.com/knx-mcp/knx-mcp-community/releases) · [Release 2 notes](docs/release-notes/1.2.0.4.md) · [Release 1 notes](docs/release-notes/1.1.0.0.md)
+- **App releases:** [Version history](docs/releases.md) · [GitHub Releases](https://github.com/knx-mcp/knx-mcp-community/releases) · [1.2.1.0 notes](docs/release-notes/1.2.1.0.md) · [Release 2 notes](docs/release-notes/1.2.0.4.md) · [Release 1 notes](docs/release-notes/1.1.0.0.md)
 - **Security:** [SECURITY.md](SECURITY.md)
 
 ## App releases and downloads
 
-**KNX-MCP 1.2.0.4 (Release 2)** is validated by KNX and available in the KNX Online Shop — see the [release notes](docs/release-notes/1.2.0.4.md). Corrections found since then follow as a bug-fix release.
+**KNX-MCP 1.2.1.0** is validated by KNX and available in the KNX Online Shop — a bug-fix release for Release 2 (1.2.0.4) with program files signed through Microsoft. See the [release notes](docs/release-notes/1.2.1.0.md).
 
 
 KNX-MCP app versions are distributed **only through the [KNX Online Shop (MyKNX)](https://my.knx.org/shop?action=search&search=KNX-MCP)**. The [version history](docs/releases.md) and [GitHub Releases](https://github.com/knx-mcp/knx-mcp-community/releases) provide release information; no KNX-MCP ETS App installer or application source code is hosted here.
 
-The **KNX-MCP Claude Desktop extension** is the exception: an independent client with its own version number. Its package `KNX-MCP-1.0.4.mcpb`, the checksum and a source archive are attached to the [GitHub release `claude-v1.0.4`](https://github.com/knx-mcp/knx-mcp-community/releases/tag/claude-v1.0.4); the source is in [`clients/knx-mcp-claude`](clients/knx-mcp-claude/).
+The **KNX-MCP Claude Desktop extension** is the exception: an independent client with its own version number. Its package `KNX-MCP-1.0.5.mcpb` and the checksum are attached to the [GitHub release `claude-v1.0.5`](https://github.com/knx-mcp/knx-mcp-community/releases/tag/claude-v1.0.5); the source is in [`clients/knx-mcp-claude`](clients/knx-mcp-claude/).
 
 ## What KNX-MCP does
 
