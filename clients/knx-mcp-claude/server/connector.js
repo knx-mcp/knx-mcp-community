@@ -26,7 +26,7 @@ const SETUP_TIMEOUT_MS = 15000;
 const PROTOCOL = '2025-06-18';
 const MESSAGE_LIMIT = 16 * 1024 * 1024;
 const READ_NOTICE =
-  'SESSION_RECOVERED: This ETS connection was initialized again. Recheck the current project and objects before changes; previous results may be stale.';
+  'SESSION_RECOVERED: This ETS connection was initialized again; previous results may be stale. Before the next change, call ets_list_projects and read the affected objects again with "project" set to the current project key.';
 const WRITE_NOTICE =
   'PROJECT_RECHECK_REQUIRED: This call was not executed. The ETS connection was initialized again. List its current projects and read the affected objects using the current project key, then consciously repeat the intended change with that project key. An earlier operation with a lost response may already have executed.';
 
@@ -455,9 +455,26 @@ class Endpoint {
             this.checkedProjects.set(args.project, sequence);
           if (this.noticePending) {
             this.noticePending = false;
+            // The notice is the warning: calls sent after this answer came back
+            // may recheck. Calls already admitted were sent without it and stay
+            // behind the barrier. Until 1.0.5 the first change after a recovery
+            // always failed once, even after a deliberate recheck.
+            if (!this.changeWarned) {
+              this.changeWarned = true;
+              this.recoveryBarrier = this.admittedCalls;
+            }
+            // A 2025-06-18 server sends the data as structured content only.
+            // Hosts then show the text blocks alone, and the notice would hide
+            // the answer it came with.
+            const hasText = result.content.some((c) => c && c.type === 'text');
+            const data =
+              !hasText && result.structuredContent !== undefined
+                ? [{ type: 'text', text: JSON.stringify(result.structuredContent) }]
+                : [];
             result = {
               ...result,
-              content: [...result.content, { type: 'text', text: READ_NOTICE }],
+              // Hosts join text blocks without a separator.
+              content: [{ type: 'text', text: READ_NOTICE + '\n\n' }, ...result.content, ...data],
             };
           }
         }
@@ -515,7 +532,7 @@ function connectionNamespaces(endpoints) {
     label:
       endpoint.profile.name
         .normalize('NFKD')
-        .replace(/[\u0300-\u036f]/g, '')
+        .replace(/[̀-ͯ]/g, '')
         .replace(/[^A-Za-z0-9-]+/g, '_')
         .replace(/^_+|_+$/g, '') || 'ETS',
   }));
