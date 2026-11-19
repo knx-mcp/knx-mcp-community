@@ -27,9 +27,9 @@ node --test tests/*.test.js
 python tests/package_test.py
 python tests/source_export_test.py
 npx --yes prettier@3.6.2 --check "server/*.js" "tests/*.js"
-python build.py ../dist/KNX-MCP-1.0.4.mcpb
+python build.py ../dist/KNX-MCP-1.0.5.mcpb
 npx --yes @anthropic-ai/mcpb@2.1.2 validate manifest.json
-python export.py ../dist/KNX-MCP-1.0.4-sources.zip
+python export.py ../dist/KNX-MCP-1.0.5-sources.zip
 ```
 
 Formatters/validator are build tools only, never runtime downloads. Tests use

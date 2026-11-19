@@ -9,8 +9,8 @@ certificati.
 
 | In breve | Dettagli |
 | --- | --- |
-| Client | **1.0.4** |
-| Pacchetto di installazione | `KNX-MCP-1.0.4.mcpb` |
+| Client | **1.0.5** |
+| Pacchetto di installazione | `KNX-MCP-1.0.5.mcpb` |
 | Versione ETS App di riferimento | KNX-MCP **1.2.0.4** e versioni successive compatibili |
 | Piattaforma | Claude Desktop su Windows |
 | Runtime | Node.js **22.16.0 o successivo**, fornito dall’applicazione host |
@@ -50,7 +50,7 @@ Ripetere questi passaggi per ogni ulteriore endpoint ETS da utilizzare.
 
 ### 2. Installare l’estensione in Claude
 
-1. Installare **`KNX-MCP-1.0.4.mcpb`** nelle impostazioni delle estensioni di Claude.
+1. Installare **`KNX-MCP-1.0.5.mcpb`** nelle impostazioni delle estensioni di Claude.
 2. In **Profili di connessione (consigliato)**, selezionare i profili esportati e
    salvare le impostazioni. È possibile selezionare fino a **32 profili**.
 3. Chiudere completamente Claude, compreso il processo nell’area di notifica,

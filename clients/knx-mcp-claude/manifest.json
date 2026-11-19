@@ -2,7 +2,7 @@
   "manifest_version": "0.3",
   "name": "knx-mcp-claude",
   "display_name": "KNX-MCP",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "Connect named KNX ETS endpoints using private profiles or two optional test connections.",
   "long_description": "Connect Claude Desktop on Windows to KNX-MCP ETS app 1.2.0.4 or a compatible later version. Prefer exported profiles for named ETS5/ETS6 endpoints. Two optional manual connections accept a name, URL and bearer token. HTTPS validates certificates; HTTP requires explicit consent. Uses the host Node.js runtime. ETS permissions and confirmations remain active. Tool results are shared with the AI host.",
   "author": {

@@ -1,14 +1,14 @@
 # KNX-MCP distribution files
 
-Client version: **1.0.4**. Technical identity: `knx-mcp-claude`.
+Client version: **1.0.5**. Technical identity: `knx-mcp-claude`.
 Publisher: **Gerald Docenko**. ETS App compatibility baseline: **1.2.0.4**.
 
 | File | Purpose |
 |---|---|
-| `KNX-MCP-1.0.4.mcpb` | Claude Desktop extension with the client runtime, icon and user guides |
-| `KNX-MCP-1.0.4.mcpb.sha256` | SHA256 checksum of that exact package |
-| `KNX-MCP-1.0.4-sources.zip` | Standalone source, tests, build scripts and documentation |
-| `KNX-MCP-1.0.4-sources.zip.sha256` | Checksum of the source archive |
+| `KNX-MCP-1.0.5.mcpb` | Claude Desktop extension with the client runtime, icon and user guides |
+| `KNX-MCP-1.0.5.mcpb.sha256` | SHA256 checksum of that exact package |
+| `KNX-MCP-1.0.5-sources.zip` | Standalone source, tests, build scripts and documentation |
+| `KNX-MCP-1.0.5-sources.zip.sha256` | Checksum of the source archive |
 | `SOURCE-SHA256SUMS.txt` inside the source ZIP | Checksums of the exported source files |
 
 [Release notes](CHANGELOG.md) describe the delivered functionality.
@@ -22,8 +22,8 @@ In PowerShell, calculate the checksum and compare it with the checksum file
 from the same trusted distribution source:
 
 ```powershell
-Get-FileHash -Algorithm SHA256 .\KNX-MCP-1.0.4.mcpb
-Get-Content .\KNX-MCP-1.0.4.mcpb.sha256
+Get-FileHash -Algorithm SHA256 .\KNX-MCP-1.0.5.mcpb
+Get-Content .\KNX-MCP-1.0.5.mcpb.sha256
 ```
 
 A checksum verifies byte equality; it does not replace a trusted download source

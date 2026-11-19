@@ -403,10 +403,13 @@ class PackageTests(unittest.TestCase):
     def test_public_release_has_no_internal_draft_history(self):
         manifest = json.loads((self.root / "manifest.json").read_text(encoding="utf-8"))
         notes = (self.root / "release/CHANGELOG.md").read_text(encoding="utf-8")
-        self.assertEqual(
-            re.findall(r"^## (.+)$", notes, re.MULTILINE),
-            [manifest["version"] + " — Initial release"],
-        )
+        headings = re.findall(r"^## (.+)$", notes, re.MULTILINE)
+        # Newest first: the current version on top, the first public release last,
+        # and nothing but released versions in between.
+        self.assertTrue(headings[0].startswith(manifest["version"] + " — "))
+        self.assertEqual(headings[-1], "1.0.4 — Initial release")
+        for heading in headings:
+            self.assertRegex(heading, r"^\d+\.\d+\.\d+ — \S")
         for name in build.FILES:
             if name.endswith(".md"):
                 text = (self.root / name).read_text(encoding="utf-8").lower()

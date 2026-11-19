@@ -1,5 +1,19 @@
 # KNX-MCP for Claude Desktop — release notes
 
+## 1.0.5 — Smoother recheck after an ETS restart
+
+- After ETS or its KNX-MCP server restarted, the first change was always refused
+  once, even when the current project list and the project had already been read
+  again. A recheck made after the restart notice now counts at once. Calls that
+  were already on their way when the notice arrived still do not count, and
+  modifying operations with uncertain outcomes are still never repeated.
+- The restart notice no longer hides the answer it comes with: when the ETS App
+  sends structured data only, the data is shown as text next to the notice.
+- The notice says exactly what to do: list the projects, then read the affected
+  objects again with the current project key.
+
+Works with every ETS App version from the compatibility baseline 1.2.0.4 on.
+
 ## 1.0.4 — Initial release
 
 KNX-MCP connects Claude Desktop on Windows to named ETS5/ETS6 endpoints. The
