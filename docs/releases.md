@@ -4,7 +4,7 @@ This community repository documents official **KNX-MCP ETS App** releases. The a
 
 | KNX-MCP version | Release | Supported ETS versions | Release information |
 |---|---|---|---|
-| **1.2.1.0** | Bug-fix release · November 2026 — fixes, program files **signed through Microsoft** | ETS5 5.7+ and ETS6 | [Release notes](release-notes/1.2.1.0.md) · [GitHub release with PDF (EN/DE)](https://github.com/knx-mcp/knx-mcp-community/releases/tag/app-v1.2.1.0) |
+| **1.2.1.0** | Release 3 · November 2026 — program files **signed through Microsoft**, refinements | ETS5 5.7+ and ETS6 | [Release notes](release-notes/1.2.1.0.md) · [GitHub release with PDF (EN/DE)](https://github.com/knx-mcp/knx-mcp-community/releases/tag/app-v1.2.1.0) |
 | **1.2.0.4** | Release 2 · November 2026 — improved communication, **HTTPS** | ETS5 5.7+ and ETS6 | [Release notes](release-notes/1.2.0.4.md) · [GitHub release with PDF (EN/DE)](https://github.com/knx-mcp/knx-mcp-community/releases/tag/app-v1.2.0.4) |
 | **1.1.0.0** | Release 1 · October 2026 | ETS5 5.7+ and ETS6 | [Release notes](release-notes/1.1.0.0.md) |
 
@@ -23,7 +23,7 @@ Source, guides and release notes: [`clients/knx-mcp-claude`](../clients/knx-mcp-
 
 ## Next app version
 
-Corrections found after 1.2.1.0 are collected in the community issues and follow as further bug-fix releases. Issues marked `status:ready-for-test` are fixed in a released or upcoming version and are closed after a retest. The [1.2.0.0 issue triage](roadmap/knx-mcp-1.2.0.0-issue-triage.md) is kept for reference; its candidates were delivered with 1.2.0.4.
+Suggestions and reports after 1.2.1.0 are collected in the community issues and flow into the next version. Issues marked `status:ready-for-test` are fixed in a released or upcoming version and are closed after a retest. The [1.2.0.0 issue triage](roadmap/knx-mcp-1.2.0.0-issue-triage.md) is kept for reference; its candidates were delivered with 1.2.0.4.
 
 ## What GitHub Releases contain
 
