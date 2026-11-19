@@ -564,7 +564,7 @@ test('Old profiles require explicit re-export; absent or malformed embedded keys
     ' key',
     'key ',
     'bad\r\nheader',
-    'bad-\u005Cu0100',
+    'bad-\u0100',
     'x'.repeat(4097),
   ]) {
     assert.throws(
