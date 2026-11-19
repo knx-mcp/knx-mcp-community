@@ -2,11 +2,11 @@
 
 **KNX-MCP** ist eine ETS-App, die das geöffnete ETS-Projekt über das Model Context Protocol (MCP) mit MCP-fähigen KI-Assistenten verbindet.
 
-> **Neu in 1.2.1.0: Fehlerbehebungen und von Microsoft signierte Programmdateien** – KNX-MCP startet damit auch unter Windows 11 mit eingeschalteter intelligenter App-Steuerung (Smart App Control). [Release Notes (Englisch)](release-notes/1.2.1.0.md)
+> **Neu in Release 3 (1.2.1.0): von Microsoft signierte Programmdateien.** KNX-MCP läuft damit auch unter Windows 11 mit intelligenter App-Steuerung (Smart App Control). Dazu Verfeinerungen bei Gruppenadressen, Geräten, Funktionen, Busmonitor und DALI-Gateways. [Release Notes (Englisch)](release-notes/1.2.1.0.md)
 
 > **KNX-MCP für Claude Desktop 1.0.5.** Eine Erweiterung für Claude Desktop, die eine oder mehrere ETS5-/ETS6-Instanzen über exportierte HTTPS-Verbindungsprofile anbindet – ohne `mcp-remote`-Konfiguration. 1.0.5 prüft nach einem ETS-Neustart reibungsloser nach. [Download](https://github.com/knx-mcp/knx-mcp-community/releases/tag/claude-v1.0.5) · [Anleitung](../clients/knx-mcp-claude/README.de.md)
 
-Aktuelle Version: **1.2.1.0** (Fehlerbehebung zu Release 2)  
+Aktuelle Version: **1.2.1.0 · Release 3**  
 Unterstützt: **ETS5 ab 5.7 und ETS6**  
 Bezug: derzeit **kostenlos** über den KNX Online Shop.
 

@@ -1,8 +1,8 @@
 # Getting started with KNX-MCP
 
-This guide covers **KNX-MCP 1.2.1.0** (bug-fix release of Release 2).
+This guide covers **KNX-MCP 1.2.1.0 · Release 3**.
 
-> **New in Release 2: improved communication with encryption.** HTTPS directly in the app (optional), the access key as `Authorization: Bearer`, several agents at once, and direct connections for Microsoft Scout and GitHub Copilot. In many cases no proxy or bridge is needed any more.
+> **Since Release 2: improved communication with encryption.** HTTPS directly in the app (optional), the access key as `Authorization: Bearer`, several agents at once, and direct connections for Microsoft Scout and GitHub Copilot. In many cases no proxy or bridge is needed any more.
 
 ## 1. Install KNX-MCP
 
