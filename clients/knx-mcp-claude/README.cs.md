@@ -9,8 +9,8 @@ v certifikáty.
 
 | Přehled | Podrobnosti |
 | --- | --- |
-| Klient | **1.0.4** |
-| Instalační balíček | `KNX-MCP-1.0.4.mcpb` |
+| Klient | **1.0.5** |
+| Instalační balíček | `KNX-MCP-1.0.5.mcpb` |
 | Referenční verze aplikace ETS | KNX-MCP **1.2.0.4** a kompatibilní novější verze |
 | Platforma | Claude Desktop ve Windows |
 | Běhové prostředí | Node.js **22.16.0 nebo novější**, poskytované hostitelskou aplikací |
@@ -47,7 +47,7 @@ Tyto kroky opakujte pro každý další koncový bod ETS, který chcete použív
 
 ### 2. Nainstalujte rozšíření do Claude
 
-1. V nastavení rozšíření Claude nainstalujte **`KNX-MCP-1.0.4.mcpb`**.
+1. V nastavení rozšíření Claude nainstalujte **`KNX-MCP-1.0.5.mcpb`**.
 2. V části **Profily připojení (doporučeno)** vyberte exportované profily a uložte
    nastavení. Můžete vybrat až **32 profilů**.
 3. Claude úplně ukončete, včetně procesu v oznamovací oblasti, a znovu spusťte.

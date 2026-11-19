@@ -8,8 +8,8 @@ without mixing their sessions, credentials or certificate trust.
 
 | At a glance | Details |
 | --- | --- |
-| Client | **1.0.4** |
-| Installation package | `KNX-MCP-1.0.4.mcpb` |
+| Client | **1.0.5** |
+| Installation package | `KNX-MCP-1.0.5.mcpb` |
 | ETS App compatibility baseline | KNX-MCP **1.2.0.4** and compatible later versions |
 | Platform | Claude Desktop on Windows |
 | Runtime | Node.js **22.16.0 or later**, supplied by the host |
@@ -45,7 +45,7 @@ Repeat these steps for each additional ETS endpoint you want to use.
 
 ### 2. Install the extension in Claude
 
-1. Install **`KNX-MCP-1.0.4.mcpb`** in Claude's extension settings.
+1. Install **`KNX-MCP-1.0.5.mcpb`** in Claude's extension settings.
 2. Under **Connection profiles (recommended)**, select the exported profile files
    and save the settings. You can select up to **32 profiles**.
 3. Fully quit Claude, including its notification-area process, and start it again.

@@ -9,8 +9,8 @@ Zertifikatsvertrauen verwenden.
 
 | Auf einen Blick | Angaben |
 | --- | --- |
-| Client | **1.0.4** |
-| Installationspaket | `KNX-MCP-1.0.4.mcpb` |
+| Client | **1.0.5** |
+| Installationspaket | `KNX-MCP-1.0.5.mcpb` |
 | Kompatibilitätsbasis der ETS-App | KNX-MCP **1.2.0.4** und kompatible Folgeversionen |
 | Plattform | Claude Desktop unter Windows |
 | Laufzeit | Node.js **ab 22.16.0**, vom Host bereitgestellt |
@@ -49,7 +49,7 @@ Diese Schritte für jeden weiteren gewünschten ETS-Endpunkt wiederholen.
 
 ### 2. Die Erweiterung in Claude installieren
 
-1. **`KNX-MCP-1.0.4.mcpb`** in Claudes Erweiterungseinstellungen installieren.
+1. **`KNX-MCP-1.0.5.mcpb`** in Claudes Erweiterungseinstellungen installieren.
 2. Unter **Verbindungsprofile (empfohlen)** die exportierten Profildateien auswählen
    und speichern. Es können bis zu **32 Profile** ausgewählt werden.
 3. Claude vollständig beenden, einschließlich des Prozesses im Infobereich,
