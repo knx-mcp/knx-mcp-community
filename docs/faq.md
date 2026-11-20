@@ -31,6 +31,8 @@ KNX-MCP exposes an MCP endpoint using **Streamable HTTP**. MCP clients that supp
 
 Yes. From **Release 3 (1.2.1.0)** the KNX-MCP program files are signed through Microsoft, so Windows 11 loads them with **Smart App Control** switched on. Earlier versions are not code-signed; with Smart App Control switched on, install 1.2.1.0. If an earlier installation attempt left the folder `M037B-A02D7` and the file `M037B-A02D7.signature` behind in `C:\ProgramData\KNX\ETS6\Apps\AddIns` (ETS5: `…\ETS5\Apps\AddIns`), close ETS completely, delete both and install the app again.
 
+**ETS5:** when an app is installed, ETS5 checks its signature with a library of its own. On some Windows 11 systems with Smart App Control switched on, Windows does not load this library, and ETS5 reports that an application control policy blocked `Knx.AppCertification.Signing`. This affects the installation of ETS Apps in ETS5 in general, not KNX-MCP alone. Switch Smart App Control off for the installation (Windows Security → App & browser control → Smart App Control), or use ETS6, where the installation works with Smart App Control switched on.
+
 ## Why does my AI client not see the project?
 
 Check that ETS is running with the project open, **the project MCP is started**, the configured endpoint and port match your ETS instance, and the client uses the current access key. Also check the client’s transport/bridge configuration and local firewall. See the [troubleshooting section](getting-started.md#9-troubleshooting).
